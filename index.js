@@ -1,15 +1,15 @@
-// function produceDrivingRange(blocks1){
-//   return function(blocks2){
-//       let noOfBlocks = parseInt(blocks1) - parseInt(blocks2)
-//       if (noOfBlocks > blocks1){
-//         return `within range by ${noOfBlocks}`
-//       }
-//       else {
-//         return `${noOfBlocks*1} blocks out of range`
-//     }
-//   }
-// }
-// produceDrivingRange(8);
+function produceDrivingRange(range){
+  return function(blocks1, blocks2){
+      let noOfBlocks = parseInt(blocks2) - parseInt(blocks1)
+      if (noOfBlocks < range){
+        return `within range by ${noOfBlocks}`
+      }
+      else {
+        return `${noOfBlocks - range} blocks out of range`
+    }
+  }
+}
+produceDrivingRange(8);
 
 function produceDrivingRange(blockRange) {
   return function (from, to) {
